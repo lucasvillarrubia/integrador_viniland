@@ -8,7 +8,6 @@
         list-style: none;
         font-family: 'Play', sans-serif;
         max-width: 100%;
-        border: 1px solid red;
 }
 
 body {
@@ -310,6 +309,7 @@ header {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        gap: 50px;
 }
 
 .direccion_contacto p {
