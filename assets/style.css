@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
         margin: 0;
@@ -6,7 +6,7 @@
         box-sizing: border-box;
         text-decoration: none;
         list-style: none;
-        font-family: 'Play', sans-serif;
+        font-family: 'Anybody', sans-serif;
         max-width: 100%;
 }
 
@@ -21,38 +21,43 @@ html {
 }
 
 :root {
-        --amarillo: rgb(252, 207, 9);
-        --morado: rgb(77, 5, 147);
-        --naranja: rgb(255, 171, 15);
-        --blanco: white;
-        --negro: black;
-        --verde: rgb(0, 59, 23);
+        --marron: rgb(86, 44, 44);
+        --beige: rgb(255, 214, 92);
+        --verde: rgb(48, 107, 52);
+        --verdecito: rgb(200, 224, 135);
+        --azul: rgb(43, 65, 98);
+        --celestito: rgb(168, 213, 226);
+        --mantecol: rgb(220, 195, 170);
+        --salmoncito: rgb(245, 155, 113);
+        --transparente: rgba(1, 1, 1, 0);
 }
 
 
 /* -------------------- NAVBAR -------------------- */
 header {
-        background: var(--amarillo);
+        background: var(--marron);
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        padding-bottom: 1rem;
+        min-height: 100px;
 }
 
 .logo_header {
-        height: 100px;
+        height: 80px;
+        margin-right: 10px;
 }
 
 .icono_hamburguesa {
-        font-size: 35px;
-        color: var(--morado);
-        margin-right: 2rem;
+        font-size: 40px;
+        color: var(--salmoncito);
+        margin-left: 2rem;
 }
 
 .nav {
         display: none;
-        margin-left: 1rem;
+        width: 100%;
+        padding: 1rem 0;
 }
 
 .lista_links {
@@ -60,19 +65,18 @@ header {
         flex-direction: column;
         justify-content: space-around;
         word-wrap: break-word;
-        align-items: left;
+        align-items: center;
         gap: 20px;
         font-size: 30px;
 }
 
 .link {
-        color: var(--morado);
-        font-weight: bold;
-        text-transform: uppercase;
+        color: white;
+        font-weight: 500;
 }
 
 .link:hover {
-        text-decoration: underline var(--morado);
+        text-decoration: underline var(--mantecol);
 }
 
 #toggle_hamburguesa {
@@ -81,8 +85,7 @@ header {
 
 #toggle_hamburguesa:checked ~ .nav {
         display: block;
-        width: 100%;
-        padding: 1rem 0;
+        transition: all 1.5s ease-in-out;
 }
 
 .icono_hamburguesa:hover {
@@ -91,13 +94,24 @@ header {
 
 #toggle_hamburguesa:checked ~ .icono_hamburguesa {
         transform: rotate(90deg);
-        transition: all 0.5s ease;
+        transition: transform 0.5s ease;
+        margin-top: 30px;
+        margin-bottom: 20px;
+}
+
+#toggle_hamburguesa:checked ~ .logo_header {
+        transition: all 1.5s ease-in-out;
+        margin: 0 10px 20px auto;
 }
 
 /* -------------------- BIENVENIDA -------------------- */
+#bienvenida {
+        background: url(https://cdn-0.studybreaks.com/wp-content/uploads/2022/05/samuel-regan-asante-5j7nQv-jaVM-unsplash-scaled-e1651881324847.jpg?ezimgfmt=rs:0x0/rscb6/ng:webp/ngcb6) no-repeat center/cover;
+}
+
 .cont_bienvenida {
+        background-color: rgba(85, 45, 45, 0.5);
         padding: 3rem 0;
-        background: var(--blanco);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -118,13 +132,13 @@ header {
         text-align: center;
         overflow-wrap: break-word;
         font-size: 50px;
-        color: black;
+        color: var(--mantecol);
 }
 
 .texto_bienvenida {
         text-align: center;
         text-justify: auto;
-        color: black;
+        color: var(--mantecol);
         padding: 10px;
 }
 
@@ -152,7 +166,7 @@ header {
 }
 
 .contact {
-        background: var(--amarillo);
+        background: var(--mantecol);
         color: black;
 }
 
@@ -298,7 +312,7 @@ header {
 }
 
 #enviar {
-        background-color: rgb(252, 207, 9);
+        background-color: var(--mantecol);
         cursor: pointer;
         padding: 1.5rem;
 }
@@ -340,7 +354,7 @@ header {
 
 /* -------------------- FOOTER -------------------- */
 footer {
-        background: rgb(77, 5, 147);
+        background: var(--azul);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -350,21 +364,21 @@ footer {
 }
 
 .logo_footer {
-        background: rgb(252, 207, 9);
+        background: var(--mantecol);
         border-radius: 500px;
         height: 125px;
         margin: 1rem;
 }
 
 .derechos_footer {
-        color: rgb(252, 207, 9);
+        color: var(--mantecol);
         font-size: 20px;
 }
 
 .links_footer a {
         text-decoration: underline;
         font-size: 15px;
-        color: rgb(252, 207, 9);
+        color: var(--mantecol);
 }
 
 
@@ -382,13 +396,18 @@ footer {
 @media screen and (min-width: 1024px) {
 
         #container {
-                background: linear-gradient(0deg, rgba(245,155,113,1) 0%, rgba(255,214,92,1) 100%);
+                background: linear-gradient(0deg, var(--celestito) 0%, var(--salmoncito) 100%);
                 padding: 5% 0;
         }
 
         /* -------------------- NAVBAR -------------------- */
         header {
                 flex-wrap: nowrap;
+                padding: 0;
+                position: sticky;
+                top: 0;
+                gap: 100px;
+                min-height: 120px;
         }
 
         header, main, footer {
@@ -397,8 +416,8 @@ footer {
         }
 
         .logo_header {
-                height: 125px;
-                margin-left: 0.5rem;
+                height: 100px;
+                margin-right: 1rem;
         }
         
         .icono_hamburguesa {
@@ -418,7 +437,7 @@ footer {
                 flex-direction: row;
                 flex-wrap: wrap;
                 font-size: 25px;
-                padding: 2rem;
+                margin-left: 20px;
                 align-items: center;
         }
         
@@ -429,7 +448,7 @@ footer {
         .link:hover {
                 margin: 0;
                 padding: 1rem;
-                background: var(--naranja);
+                background: black;
                 border-radius: 20px;
                 text-decoration: none;
         }
@@ -467,7 +486,7 @@ footer {
                 max-width: none;
                 text-align: left;
                 max-width: 750px;
-                color: black;
+                color: var(--mantecol);
                 font-size: 30px;
                 line-height: 40px;
         }
