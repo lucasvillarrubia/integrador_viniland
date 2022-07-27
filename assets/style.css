@@ -8,6 +8,7 @@
         list-style: none;
         font-family: 'Play', sans-serif;
         max-width: 100%;
+        border: 1px solid red;
 }
 
 body {
@@ -268,7 +269,7 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
         gap: 20px;
 }
@@ -279,10 +280,13 @@ header {
         padding: 0.5rem 1rem;
         border-radius: 30px;
         font-size: 20px;
+        width: 100%;
 }
 
 .formulario_contacto label {
         font-size: 20px;
+        text-align: left;
+        width: 100%;
 }
 
 #mensaje_contacto {
@@ -305,8 +309,6 @@ header {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
-        order: 2;
         width: 100%;
 }
 
@@ -324,16 +326,14 @@ header {
 }
 
 .redes_contacto {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 50px;
-        flex-wrap: wrap;
 }
 
 .link_redes {
-        height: 50px;
+        max-height: 100px;
 }
 
 
