@@ -11,20 +11,27 @@
 <body>
         <div id="container">
                 <header>
-                        <nav class="nav">
-                                <ul class="lista_links">
-                                        <li class="nav-item">
-                                                <a href="javascript:history.back()" class="link">Volver</a></li>
-                                </ul>
-                        </nav>
-                        <a href="#" class="logo_header"><img src="./img/logo.png" alt="logo_empresa" class="logo_header"></a>
+                        <a href="#" class="logo_header"><i class="fa-solid fa-backward-fast"></i><img src="./img/logo.png" alt="logo_empresa" class="logo_header"></a>
                 </header>
                 <main>
                         <section id="bienvenida">
                                 <div class="cont_bienvenida">
-                                        <h1 data-text="ViniLand" class="titulo_bienvenida">ViniLand</h1>
+                                        <h1 data-text="ViniLand" class="titulo_bienvenida">Iniciar sesión</h1>
+                                        <form class="formulario_contacto">
+                                                <div>
+                                                        <label for="nombre_contacto">Correo</label>
+                                                        <input type="email" id="nombre_contacto">
+                                                </div>
+                                                <div>
+                                                        <label for="correo_contacto">Contraseña</label>
+                                                        <input type="password" id="correo_contacto">
+                                                </div>
+                                                <div>
+                                                        <input type="submit" class="boton" id="enviar" value="Ingresar">
+                                                </div>
+                                        </form>
                                         <p class="texto_bienvenida">
-                                                ¿No tenés cuenta todavía?
+                                                ¿No tenés una cuenta todavía?
                                         </p>
                                         <div class="botones">
                                                 <a href="./signin.html" class="boton contact">Registrate</a>
