@@ -434,7 +434,7 @@ footer {
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
 
         #container {
                 background: linear-gradient(0deg, var(--celestito) 0%, var(--beige) 50%, var(--salmoncito) 100%);
