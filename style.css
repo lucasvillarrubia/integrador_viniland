@@ -300,6 +300,7 @@ header {
         justify-content: center;
         align-items: left;
         gap: 20px;
+        width: 100%;
 }
 
 .formulario_contacto input {
@@ -330,6 +331,7 @@ header {
         background-color: var(--mantecol);
         cursor: pointer;
         padding: 1.5rem;
+        width: auto;
 }
 
 /* -------------------- FOOTER -------------------- */
