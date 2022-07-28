@@ -291,6 +291,7 @@ header {
         justify-content: space-between;
         align-items: center;
         gap: 20px;
+        width: 100%;
 }
 
 .formulario_contacto div {
