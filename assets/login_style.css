@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Galada&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        font-family: 'Anybody', sans-serif;
+        max-width: 100%;
+}
+
+body {
+        width: 100%;
+        background: red;
+        /* background: linear-gradient(0deg, rgba(245,155,113,1) 0%, rgba(255,214,92,1) 100%); */
+}
+
+html {
+        scroll-behavior: smooth;
+}
+
+:root {
+        --marron: rgb(86, 44, 44);
+        --beige: rgb(240, 240, 225);
+        --mostaza: rgb(255, 214, 92);
+        --verde: rgb(48, 107, 52);
+        --verdecito: rgb(200, 224, 135);
+        --azul: rgb(43, 65, 98);
+        --celestito: rgb(168, 213, 226);
+        --mantecol: rgb(220, 195, 170);
+        --salmoncito: rgb(245, 155, 113);
+        --transparente: rgba(1, 1, 1, 0);
+        --borde_texto:  -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+        --borde_claro: -1px -1px 0 var(--mantecol), 1px -1px 0 var(--mantecol), -1px 1px 0 var(--mantecol), 1px 1px 0 var(--mantecol);
+        --borde_fino: -1px -1px 0 var(--marron), 1px -1px 0 var(--marron), -1px 1px 0 var(--marron), 1px 1px 0 var(--marron);
+}
+
+
+/* -------------------- NAVBAR -------------------- */
+header {
+        background: var(--marron);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 100px;
+}
+
+.logo_header {
+        height: 80px;
+        margin-right: 10px;
+}
+
+.icono_hamburguesa {
+        font-size: 40px;
+        color: var(--salmoncito);
+        margin-left: 2rem;
+}
+
+.nav {
+        display: none;
+        width: 100%;
+        padding: 1rem 0;
+}
+
+.lista_links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        word-wrap: break-word;
+        align-items: center;
+        gap: 20px;
+        font-size: 30px;
+}
+
+.link {
+        color: var(--beige);
+        font-weight: 500;
+        text-shadow: var(--borde_texto);
+}
+
+.link:hover {
+        text-decoration: underline black;
+}
+
+#toggle_hamburguesa {
+        display: none;
+}
+
+#toggle_hamburguesa:checked ~ .nav {
+        display: block;
+        transition: all 1.5s ease-in-out;
+}
+
+.icono_hamburguesa:hover {
+        cursor: pointer;
+}
+
+#toggle_hamburguesa:checked ~ .icono_hamburguesa {
+        transform: rotate(90deg);
+        transition: transform 0.5s ease;
+        margin-top: 30px;
+        margin-bottom: 20px;
+}
+
+#toggle_hamburguesa:checked ~ .logo_header {
+        transition: all 1.5s ease-in-out;
+        margin: 0 10px 20px auto;
+}
+
+/* -------------------- BIENVENIDA -------------------- */
+#bienvenida {
+        background: url(https://cdn-0.studybreaks.com/wp-content/uploads/2022/05/samuel-regan-asante-5j7nQv-jaVM-unsplash-scaled-e1651881324847.jpg?ezimgfmt=rs:0x0/rscb6/ng:webp/ngcb6) no-repeat center/cover;
+}
+
+.cont_bienvenida {
+        background-color: rgba(85, 45, 45, 0.5);
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+}
+
+.titulo_bienvenida {
+        font-family: 'Galada', sans-serif;
+        text-align: center;
+        overflow-wrap: break-word;
+        font-size: 60px;
+        color: var(--beige);
+        text-shadow: var(--borde_texto);
+}
+
+.texto_bienvenida {
+        text-align: center;
+        text-justify: auto;
+        color: var(--beige);
+        padding: 10px;
+}
+
+.botones {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+}
+
+.boton {
+        border: 5px solid black;
+        padding: 1rem;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+}
+
+.learn {
+        background-color: white;
+        color: black;
+}
+
+.contact {
+        background: var(--mantecol);
+        color: black;
+}
+
+.imagen_landing {
+        width: 80%;
+}
+
+
+/* -------------------- PRODUCTOS -------------------- */
+.cont_productos {
+        padding: 3rem 1.5rem 5rem;
+        background-color: var(--mantecol);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.titulo_productos {
+        margin-bottom: 3rem;
+        font-size: 45px;
+        color: azure;
+        text-align: center;
+        overflow-wrap: break-word;
+}
+
+.lista_productos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+}
+
+.producto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(154, 154, 219);
+        border-radius: 10px;
+}
+
+.imagen_producto {
+        max-height: 150px;
+        width: auto;
+}
+
+.cartel_producto {
+        position: absolute;
+        background-color: white;
+        z-index: 2;
+        width: 150px;
+        text-align: center;
+        border: 5px solid black;
+        padding: 1rem 0.5rem;
+        border-radius: 50px;
+        font-size: 25px;
+        display: none;
+}
+
+.link_producto:hover ~ .cartel_producto {
+        display: block;
+}
+
+.link_producto:hover ~ .producto {
+        background-color: rgb(154, 154, 219);
+        z-index: 1;
+}
+
+.link_producto:hover ~ .imagen_producto {
+        z-index: 2;
+}
+
+
+/* -------------------- CONTACTO -------------------- */
+.cont_contacto {
+        background-color: var(--beige);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.intro_contacto {
+        padding: 3rem 1.5rem 1rem;
+}
+
+.titulo_contacto {
+        margin-bottom: 2rem;
+        font-size: 50px;
+        text-align: center;
+        color: black;
+        overflow-wrap: break-word;
+}
+
+.formulario_contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+}
+
+.formulario_contacto div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: left;
+        gap: 20px;
+}
+
+.formulario_contacto input {
+        background-color: rgb(240, 240, 240);
+        border: 2px solid black;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        font-size: 20px;
+        width: 100%;
+}
+
+.formulario_contacto label {
+        font-size: 20px;
+        text-align: left;
+        width: 100%;
+}
+
+#mensaje_contacto {
+        border: 2px solid black;
+        background-color: rgb(240, 240, 240);
+        padding: 1.5rem;
+        border-radius: 30px;
+        font-size: 20px;
+        width: 100%;
+}
+
+#enviar {
+        background-color: var(--mantecol);
+        cursor: pointer;
+        padding: 1.5rem;
+}
+
+.direccion_contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        overflow-wrap: break-word;
+        color: var(--beige);
+        gap: 20px;
+        padding-top: 2rem;
+}
+
+
+
+/* -------------------- FOOTER -------------------- */
+footer {
+        background: var(--azul);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+        padding: 3rem 1rem;
+}
+
+.info_contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+}
+
+.links_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.logos_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.loguito_footer {
+        height: 200px;
+}
+
+.typo_footer {
+        font-family: 'Galada', sans-serif;
+        font-size: 80px;
+        color: var(--marron);
+        text-shadow: var(--borde_claro);
+}
+
+.redes_contacto {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+}
+
+.link_redes {
+        font-size: 50px;
+        color: var(--beige);
+        text-shadow: var(--borde_fino);
+}
+
+.derechos_footer {
+        color: var(--mantecol);
+        font-size: 20px;
+        text-align: center;
+}
+
+.extras_footer {
+        text-align: center;
+}
+
+.extras_footer a {
+        text-decoration: underline;
+        font-size: 15px;
+        color: var(--mantecol);
+        text-align: center;
+}
+
+
+/* -------------------- ANIMACIONES -------------------- */
+@keyframes sube_y_baja {
+        0% {
+                transform: translateY(-10px);
+        }
+        100% {
+                transform: translateY(10px);
+        }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+        #container {
+                background: linear-gradient(0deg, var(--celestito) 0%, var(--beige) 50%, var(--salmoncito) 100%);
+                padding: 5% 0;
+        }
+
+        /* -------------------- NAVBAR -------------------- */
+        header {
+                flex-wrap: nowrap;
+                padding: 0;
+                position: sticky;
+                top: 0;
+                gap: 100px;
+                min-height: 120px;
+        }
+
+        header, main, footer {
+                margin: auto;
+                max-width: 90%;
+        }
+
+        .logo_header {
+                height: 100px;
+                margin-right: 1rem;
+        }
+        
+        .icono_hamburguesa {
+                font-size: 45px;
+                margin-right: 3rem;
+        }
+        
+        .nav {
+                display: block;
+        }
+        
+        .icono_hamburguesa {
+                display: none;
+        }
+        
+        .lista_links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-size: 25px;
+                margin-left: 20px;
+                align-items: center;
+                justify-content: left;
+                gap: 30px;
+        }
+        
+        .link {
+                margin: 1rem;
+        }
+
+        .link:hover {
+                margin: 0;
+                padding: 1rem;
+                background: black;
+                border-radius: 20px;
+                text-decoration: none;
+        }
+
+        #toggle_hamburguesa:checked ~ .nav {
+                display: block;
+                width: auto;
+        }
+
+        /* -------------------- BIENVENIDA -------------------- */
+        .cont_bienvenida {
+                padding: 1rem 1.5rem 3rem 5rem;
+                max-width: none;
+        }
+        
+        .titulo_bienvenida {
+                font-size: 150px;
+                max-width: none;
+        }
+        
+        .texto_bienvenida {
+                max-width: none;
+                text-align: left;
+                max-width: 750px;
+                font-size: 30px;
+                line-height: 40px;
+        }
+
+        .botones {
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+        }
+        
+        .boton {
+                font-size: 30px;
+                text-align: center;
+        }
+
+        .imagen_landing {
+                width: 80%;
+                height: auto;
+        }
+
+        /* -------------------- PRODUCTOS -------------------- */
+        .lista_productos {
+                flex-direction: row;
+                justify-content: space-around;
+        }
+
+        .producto {
+                border-radius: 10px;
+        }
+        
+
+        /* -------------------- CONTACTO -------------------- */
+        .cont_contacto {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0;
+        }
+        
+        .intro_contacto {
+                padding: 3rem;
+        }
+
+        .modos_contacto {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 50px;
+                order: 1;
+                width: auto;
+        }
+
+        .direccion_contacto {
+                text-align: left;
+                align-items: baseline;
+                font-size: 30px;
+        }
+
+        /* -------------------- FOOTER -------------------- */
+        footer {
+                background: var(--azul);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 3rem 3rem 3rem 5rem;
+        }
+
+        .info_contacto {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 150px;
+        }
+
+        .links_footer {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: right;
+        }
+
+        .logos_footer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+        }
+
+        .loguito_footer {
+                height: 200px;
+        }
+
+        .typo_footer {
+                font-family: 'Galada', sans-serif;
+                font-size: 80px;
+                color: var(--marron);
+                text-shadow: -1px -1px 0 var(--mantecol), 1px -1px 0 var(--mantecol), -1px 1px 0 var(--mantecol), 1px 1px 0 var(--mantecol);
+        }
+
+        .redes_contacto {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                gap: 50px;
+                padding-left: 50px;
+        }
+
+        .link_redes {
+                font-size: 50px;
+                color: var(--beige);
+        }
+
+        .derechos_footer {
+                color: var(--mantecol);
+                font-size: 20px;
+        }
+
+        .extras_footer a {
+                text-decoration: underline;
+                font-size: 15px;
+                color: var(--mantecol);
+        }
+}

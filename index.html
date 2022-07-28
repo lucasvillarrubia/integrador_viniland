@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Viniland - Proyecto integrador</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="./style.css">
 </head>
 <body>
         <div id="container">
@@ -16,9 +16,7 @@
                         <nav class="nav">
                                 <ul class="lista_links">
                                         <li class="nav-item">
-                                                <a href="#bienvenida" class="link">Inicio</a></li>
-                                        <li class="nav-item">
-                                                <a href="#proyectos" class="link">Productos</a></li>
+                                                <a href="#productos" class="link">Productos</a></li>
                                         <li class="nav-item">
                                                 <a href="#contacto" class="link">Contacto</a></li>
                                         <li class="nav-item">
@@ -32,37 +30,37 @@
                 <main>
                         <section id="bienvenida">
                                 <div class="cont_bienvenida">
-                                        <div class="cont_info_botones">
-                                                <h1 class="titulo_bienvenida">Welcome to... Viniland</h1>
-                                                <p class="texto_bienvenida">
-                                                        Bienvenido a la tienda online de vinilos más grande de Buenos Aires (entre otras cosas). Date una vuelta y ¡conocé los productos y servicios disponibles!
-                                                </p>
-                                                <div class="botones">
-                                                        <a href="./assets/signin.html" class="boton contact">Registrarse</a>
-                                                </div>
-                                        </div>
-                                        <div class="cont_imagen">
-                                                <img src="./assets/img/1456u5t78879-removebg-preview-removebg-preview.png" alt="bienvenidxs!" class="imagen_landing">
+                                        <h1 data-text="ViniLand" class="titulo_bienvenida">ViniLand</h1>
+                                        <img src="./assets/img/1456u5t78879-removebg-preview-removebg-preview2 (1).png" alt="bienvenidxs!" class="imagen_landing">
+                                        <p class="texto_bienvenida">
+                                                Bienvenido a la tienda online de vinilos más grande de Buenos Aires (entre otras cosas). Date una vuelta y ¡conocé los productos y servicios disponibles!
+                                        </p>
+                                        <div class="botones">
+                                                <a href="./assets/login.html" class="boton contact">Iniciar sesión</a>
                                         </div>
                                 </div>
                         </section>
-                        <section id="proyectos">
-                                <div class="cont_proyectos">
-                                        <div class="intro_proyectos">
-                                                <h2 class="titulo_proyectos">Nuestros productos más populares</h2>
+                        <section id="productos">
+                                <div class="cont_productos">
+                                        <div class="intro_productos">
+                                                <h2 class="titulo_productos">Los más buscados</h2>
                                         </div>
-                                        <div class="lista_proyectos">
-                                                <div class="proyecto">
-                                                        <a href="#" class="link_proyecto"><img src="./assets/img/9-PhotoRoom (1).png" alt="todavía no hice desafíos :(" class="imagen_proyecto"></a>
-                                                        <p class="cartel_proyecto">proyecto 1</p>
+                                        <div class="lista_productos">
+                                                <div class="producto">
+                                                        <a href="#" class="link_producto"><img src="./assets/img/9-PhotoRoom (1).png" alt="todavía no hice desafíos :(" class="imagen_producto"></a>
+                                                        <p class="cartel_producto">producto 1</p>
                                                 </div>
-                                                <div class="proyecto">
-                                                        <a href="#" class="link_proyecto"><img src="./assets/img/oops-404-error-with-a-broken-robot-rafiki-2849.png" alt="todavía no hice otros sitios :(" class="imagen_proyecto"></a>
-                                                        <p class="cartel_proyecto">proyecto 2</p>
+                                                <div class="producto">
+                                                        <a href="#" class="link_producto"><img src="./assets/img/oops-404-error-with-a-broken-robot-rafiki-2849.png" alt="todavía no hice otros sitios :(" class="imagen_producto"></a>
+                                                        <p class="cartel_producto">producto 2</p>
                                                 </div>
-                                                <div class="proyecto">
-                                                        <a href="#" class="link_proyecto"><img src="./assets/img/pngtree-cartoon-hand-drawn-business-404-error-illustration-png-image_2220254-transformed-PhotoRoom.png" alt="todavía toy chikito :(" class="imagen_proyecto"></a>
-                                                        <p class="cartel_proyecto">proyecto 3</p>
+                                                <div class="producto">
+                                                        <a href="#" class="link_producto"><img src="./assets/img/pngtree-cartoon-hand-drawn-business-404-error-illustration-png-image_2220254-transformed-PhotoRoom.png" alt="todavía toy chikito :(" class="imagen_producto"></a>
+                                                        <p class="cartel_producto">producto 3</p>
+                                                </div>
+                                                <div class="producto">
+                                                        <a href="#" class="link_producto"><img src="./assets/img/pngtree-cartoon-hand-drawn-business-404-error-illustration-png-image_2220254-transformed-PhotoRoom.png" alt="todavía toy chikito :(" class="imagen_producto"></a>
+                                                        <p class="cartel_producto">producto 3</p>
                                                 </div>
                                         </div>
                                 </div>
@@ -82,34 +80,38 @@
                                                         </div>
                                                         <div>
                                                                 <label for="mensaje_contacto">Mensaje </label>
-                                                                <textarea name="hghjg" id="mensaje_contacto" cols="20" rows="10"></textarea>
+                                                                <textarea name="hghjg" id="mensaje_contacto" cols="17" rows="10"></textarea>
                                                         </div>
                                                         <div>
                                                                 <input type="submit" class="boton" id="enviar">
                                                         </div>
                                                 </form>
                                         </div>
-                                        <div class="modos_contacto">
-                                                <div class="direccion_contacto">
-                                                        <p id="cartel_contacto">información de contacto</p>
-                                                        <p class="ubicacion">📍 Antezana 247, Ciudad de Buenos Aires, Argentina</p>
-                                                        <p class="telefono">☎️ 53-53-456 (nanananananana)</p>
-                                                        <p class="correo">📧 villar.lucase@gmail.com</p>
-                                                </div>
-                                                <div class="redes_contacto">
-                                                        <a href="#"><img class="link_redes" src="./assets/img/social-whatsapp-circle-512.png" alt="whatsapp"></a>
-                                                        <a href="#"><img class="link_redes" src="./assets/img/Round-Instagram-Logo-PNG-HD-Quality.png" alt="instagram"></a>
-                                                        <a href="#"><img class="link_redes" src="./assets/img/Facebook_f_logo_(2019).svg.png" alt="facebook"></a>
-                                                        <a href="#"><img class="link_redes" src="./assets/img/LinkedIn-Symbole-PhotoRoom.png" alt="linkedin"></a>
-                                                </div>
-                                        </div>
                                 </div>
                         </section>
                 </main>
                 <footer>
-                        <a href="#" class="logo"><img src="./assets/img/logo-vini.png" alt="logo_empresa" class="logo_footer"></a>
-                        <p class="derechos_footer">2022 Viniland ® - All Rights Reserved</p>
-                        <div class="links_footer">
+                        <div class="info_contacto">
+                                <div class="links_footer">
+                                        <div class="logos_footer">
+                                                <img src="./assets/img/logo.png" alt="logo_empresa" class="loguito_footer">
+                                                <p class="typo_footer">VLand</p>
+                                        </div>
+                                        <div class="redes_contacto">
+                                                <a href="#"><i class="link_redes fa-brands fa-whatsapp"></i></a>
+                                                <a href="#"><i class="link_redes fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="link_redes fa-brands fa-facebook"></i></a>
+                                                <a href="#"><i class="link_redes fa-brands fa-linkedin"></i></a>
+                                        </div>
+                                </div>
+                                <div class="direccion_contacto">
+                                        <p class="ubicacion"><i class="fa-solid fa-location-dot"></i> Antezana 247, Ciudad de Buenos Aires, Argentina</p>
+                                        <p class="telefono"><i class="fa-solid fa-phone"></i> 53-53-456 (nanananananana)</p>
+                                        <p class="correo"><i class="fa-solid fa-envelope"></i> villar.lucase@gmail.com</p>
+                                </div>
+                        </div>
+                        <div class="extras_footer">
+                                <p class="derechos_footer">2022 ViniLand ® - All Rights Reserved</p>
                                 <a href="#">Denunciar</a> |
                                 <a href="#">Términos y Condiciones</a> |
                                 <a href="#">Política de Privacidad</a>
