@@ -12,8 +12,6 @@
 
 body {
         width: 100%;
-        background: red;
-        /* background: linear-gradient(0deg, rgba(245,155,113,1) 0%, rgba(255,214,92,1) 100%); */
 }
 
 html {
@@ -57,6 +55,7 @@ header {
 .logo_header i {
         font-size: 25px;
         color: var(--mantecol);
+        text-shadow: var(--borde_texto);
 }
 
 
@@ -95,7 +94,7 @@ header {
         padding: 10px;
 }
 
-.formulario_contacto {
+.formulario_inicio {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -104,7 +103,7 @@ header {
         margin-bottom: 50px;
 }
 
-.formulario_contacto div {
+.formulario_inicio div {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -113,7 +112,7 @@ header {
         gap: 10px;
 }
 
-#correo_contacto, #contrasenia_contacto {
+#correo_inicio, #contrasenia_inicio {
         background-color: var(--beige);
         border: none;
         outline: none;
@@ -123,7 +122,7 @@ header {
         width: 100%;
 }
 
-.formulario_contacto label {
+.formulario_inicio label {
         font-size: 30px;
         color: var(--beige);
         text-shadow: var(--borde_texto);
@@ -295,16 +294,16 @@ footer {
                 line-height: 30px;
         }
 
-        .formulario_contacto {
+        .formulario_inicio {
                 gap: 50px;
                 margin-bottom: 50px;
         }
         
-        .formulario_contacto div {
+        .formulario_inicio div {
                 gap: 20px;
         }
         
-        #correo_contacto, #contrasenia_contacto {
+        #correo_inicio, #contrasenia_inicio {
                 min-width: 500px;
         }
 
