@@ -12,8 +12,6 @@
 
 body {
         width: 100%;
-        background: red;
-        /* background: linear-gradient(0deg, rgba(245,155,113,1) 0%, rgba(255,214,92,1) 100%); */
 }
 
 html {
@@ -43,71 +41,22 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
         min-height: 100px;
 }
 
 .logo_header {
-        height: 80px;
-        margin-right: 10px;
-}
-
-.icono_hamburguesa {
-        font-size: 40px;
-        color: var(--salmoncito);
-        margin-left: 2rem;
-}
-
-.nav {
-        display: none;
-        width: 100%;
-        padding: 1rem 0;
-}
-
-.lista_links {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        word-wrap: break-word;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
-        font-size: 30px;
+        height: 80px;
+        margin: 0 auto;
 }
 
-.link {
-        color: var(--beige);
-        font-weight: 500;
-        text-shadow: var(--borde_texto);
+.logo_header i {
+        font-size: 25px;
+        color: var(--mantecol);
 }
 
-.link:hover {
-        text-decoration: underline black;
-}
-
-#toggle_hamburguesa {
-        display: none;
-}
-
-#toggle_hamburguesa:checked ~ .nav {
-        display: block;
-        transition: all 1.5s ease-in-out;
-}
-
-.icono_hamburguesa:hover {
-        cursor: pointer;
-}
-
-#toggle_hamburguesa:checked ~ .icono_hamburguesa {
-        transform: rotate(90deg);
-        transition: transform 0.5s ease;
-        margin-top: 30px;
-        margin-bottom: 20px;
-}
-
-#toggle_hamburguesa:checked ~ .logo_header {
-        transition: all 1.5s ease-in-out;
-        margin: 0 10px 20px auto;
-}
 
 /* -------------------- BIENVENIDA -------------------- */
 #bienvenida {
@@ -115,8 +64,8 @@ header {
 }
 
 .cont_bienvenida {
-        background-color: rgba(85, 45, 45, 0.5);
-        padding: 3rem 0;
+        background-color: rgba(85, 45, 45, 0.8);
+        padding: 3rem 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -128,16 +77,71 @@ header {
         font-family: 'Galada', sans-serif;
         text-align: center;
         overflow-wrap: break-word;
-        font-size: 60px;
+        font-size: 50px;
         color: var(--beige);
         text-shadow: var(--borde_texto);
+        line-height: 50px;
+        margin-bottom: 50px;
 }
 
 .texto_bienvenida {
         text-align: center;
         text-justify: auto;
+        font-style: italic;
+        text-shadow: var(--borde_fino);
         color: var(--beige);
         padding: 10px;
+}
+
+.formulario_contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 50px;
+}
+
+.formulario_contacto div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: left;
+        gap: 10px;
+}
+
+#nombre_usuario, #contrasenia_usuario, #correo_usuario {
+        background-color: var(--beige);
+        border: none;
+        outline: none;
+        padding: 1rem;
+        border-radius: 15px;
+        font-size: 20px;
+        width: 100%;
+}
+
+.formulario_contacto label {
+        font-size: 20px;
+        color: var(--beige);
+        text-shadow: var(--borde_texto);
+        text-align: center;
+        width: 100%;
+}
+
+#texto_newsletter {
+        font-size: 15px;
+        text-shadow: none;
+        font-style: italic;
+}
+
+#newsletter {
+        height: 20px;
+}
+
+#enviar {
+        cursor: pointer;
+        background: var(--mantecol);
 }
 
 .botones {
@@ -151,25 +155,16 @@ header {
 .boton {
         border: 5px solid black;
         padding: 1rem;
-        border-radius: 50px;
+        border-radius: 30px;
         font-size: 15px;
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
 }
 
-.learn {
-        background-color: white;
-        color: black;
-}
-
 .contact {
         background: var(--mantecol);
         color: black;
-}
-
-.imagen_landing {
-        width: 80%;
 }
 
 /* -------------------- FOOTER -------------------- */
@@ -261,17 +256,6 @@ footer {
 }
 
 
-/* -------------------- ANIMACIONES -------------------- */
-@keyframes sube_y_baja {
-        0% {
-                transform: translateY(-10px);
-        }
-        100% {
-                transform: translateY(10px);
-        }
-}
-
-
 @media screen and (min-width: 1024px) {
 
         #container {
@@ -281,7 +265,6 @@ footer {
 
         /* -------------------- NAVBAR -------------------- */
         header {
-                flex-wrap: nowrap;
                 padding: 0;
                 position: sticky;
                 top: 0;
@@ -295,67 +278,54 @@ footer {
         }
 
         .logo_header {
-                height: 100px;
-                margin-right: 1rem;
-        }
-        
-        .icono_hamburguesa {
-                font-size: 45px;
-                margin-right: 3rem;
-        }
-        
-        .nav {
-                display: block;
-        }
-        
-        .icono_hamburguesa {
-                display: none;
-        }
-        
-        .lista_links {
-                flex-direction: row;
-                flex-wrap: wrap;
-                font-size: 25px;
-                margin-left: 20px;
-                align-items: center;
-                justify-content: left;
-                gap: 30px;
-        }
-        
-        .link {
-                margin: 1rem;
+                height: 150px;
+                gap: 10px;
         }
 
-        .link:hover {
-                margin: 0;
-                padding: 1rem;
-                background: black;
-                border-radius: 20px;
-                text-decoration: none;
-        }
-
-        #toggle_hamburguesa:checked ~ .nav {
-                display: block;
-                width: auto;
+        .logo_header i {
+                font-size: 50px;
         }
 
         /* -------------------- BIENVENIDA -------------------- */
         .cont_bienvenida {
-                padding: 1rem 1.5rem 3rem 5rem;
                 max-width: none;
         }
         
         .titulo_bienvenida {
-                font-size: 150px;
+                font-size: 75px;
                 max-width: none;
+                line-height: 200px;
+                margin: 0;
         }
         
         .texto_bienvenida {
-                max-width: none;
-                text-align: left;
-                max-width: 750px;
+                text-align: center;
+                font-size: 25px;
+                line-height: 30px;
+        }
+
+        .formulario_contacto {
+                gap: 50px;
+                margin-bottom: 50px;
+        }
+        
+        .formulario_contacto div {
+                gap: 20px;
+        }
+        
+        #nombre_usuario, #contrasenia_usuario, #correo_usuario {
+                min-width: 500px;
                 font-size: 30px;
-                line-height: 40px;
+        }
+
+        .formulario_contacto label {
+                font-size: 30px;
+                min-width: 500px;
+        }
+
+        #texto_newsletter {
+                font-size: 20px;
+                max-width: 200px;
         }
 
         .botones {
@@ -368,13 +338,7 @@ footer {
                 font-size: 30px;
                 text-align: center;
         }
-
-        .imagen_landing {
-                width: 80%;
-                height: auto;
-        }
-
-
+        
         /* -------------------- FOOTER -------------------- */
         footer {
                 padding: 3rem 3rem 3rem 5rem;
@@ -402,5 +366,5 @@ footer {
                 text-align: left;
                 align-items: baseline;
                 font-size: 30px;
-        }
+        }       
 }

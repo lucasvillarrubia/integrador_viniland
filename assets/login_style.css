@@ -54,6 +54,11 @@ header {
         margin: 0 auto;
 }
 
+.logo_header i {
+        font-size: 25px;
+        color: var(--mantecol);
+}
+
 
 /* -------------------- BIENVENIDA -------------------- */
 #bienvenida {
@@ -108,7 +113,7 @@ header {
         gap: 10px;
 }
 
-#nombre_contacto, #correo_contacto {
+#correo_contacto, #contrasenia_contacto {
         background-color: var(--beige);
         border: none;
         outline: none;
@@ -264,12 +269,16 @@ footer {
         }
 
         .logo_header {
-                height: 100px;
+                height: 150px;
+                gap: 10px;
+        }
+
+        .logo_header i {
+                font-size: 50px;
         }
 
         /* -------------------- BIENVENIDA -------------------- */
         .cont_bienvenida {
-                padding: 1rem 1.5rem 3rem 5rem;
                 max-width: none;
         }
         
@@ -295,7 +304,7 @@ footer {
                 gap: 20px;
         }
         
-        #correo_contacto, #nombre_contacto {
+        #correo_contacto, #contrasenia_contacto {
                 min-width: 500px;
         }
 

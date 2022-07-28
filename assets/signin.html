@@ -11,18 +11,37 @@
 <body>
         <div id="container">
                 <header>
-                        <nav class="nav">
-                                <ul class="lista_links">
-                                        <li class="nav-item">
-                                                <a href="javascript:history.back()" class="link">Volver</a></li>
-                                </ul>
-                        </nav>
-                        <a href="javascript:history.back()" class="logo_header"><img src="./img/logo.png" alt="logo_empresa" class="logo_header"></a>
+                        <a href="javascript:history.back()" class="logo_header"><i class="fa-solid fa-backward-fast"></i><img src="./img/logo.png" alt="logo_empresa" class="logo_header"></a>
                 </header>
                 <main>
                         <section id="bienvenida">
                                 <div class="cont_bienvenida">
                                         <h1 data-text="ViniLand" class="titulo_bienvenida">¡Bienvenidx!</h1>
+                                        <form class="formulario_contacto">
+                                                <div>
+                                                        <label for="nombre_usuario">Ingresá tu nombre completo</label>
+                                                        <input type="text" id="nombre_usuario">
+                                                </div>
+                                                <div>
+                                                        <label for="correo_usuario">Correo electrónico</label>
+                                                        <input type="email" id="correo_usuario">
+                                                </div>
+                                                <div>
+                                                        <label for="contrasenia_usuario">Ingresá una contraseña</label>
+                                                        <input type="password" required id="contrasenia_usuario">
+                                                </div>
+                                                <div>
+                                                        <label for="contrasenia_usuario">Repetí la contraseña</label>
+                                                        <input type="password" required id="contrasenia_usuario">
+                                                </div>
+                                                <div>
+                                                        <label for="newsletter" id="texto_newsletter">Deseo recibir información por correo sobre novedades y promociones</label>
+                                                        <input type="checkbox" checked id="newsletter">
+                                                </div>
+                                                <div>
+                                                        <input type="submit" class="boton" id="enviar" value="Confirmar">
+                                                </div>
+                                        </form>
                                 </div>
                         </section>
                 </main>
