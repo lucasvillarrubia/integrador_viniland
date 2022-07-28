@@ -66,7 +66,7 @@ header {
 
 .cont_bienvenida {
         background-color: rgba(85, 45, 45, 0.8);
-        padding: 3rem 0;
+        padding: 3rem 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -101,6 +101,7 @@ header {
         align-items: center;
         gap: 30px;
         margin-bottom: 50px;
+        width: 100%;
 }
 
 .formulario_inicio div {
@@ -108,8 +109,9 @@ header {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: left;
+        align-items: center;
         gap: 10px;
+        width: 100%;
 }
 
 #correo_inicio, #contrasenia_inicio {
@@ -303,8 +305,16 @@ footer {
                 gap: 20px;
         }
         
+        .formulario_inicio label {
+                width: 500px;
+        }
+
+        .formulario_inicio input {
+                width: 200px;
+        }
+        
         #correo_inicio, #contrasenia_inicio {
-                min-width: 500px;
+                width: 500px;
         }
 
         .botones {
